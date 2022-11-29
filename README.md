@@ -11,4 +11,4 @@ TODO
 none
 
 ## Created by
-Zachary Baker and Natalie Austin
+Zachary Baker, Natalie Austin, Sean Kang
