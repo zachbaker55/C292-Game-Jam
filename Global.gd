@@ -17,6 +17,5 @@ func _unhandled_input(event):
 				Pause_Menu.show()
 	
 
-		
 func reset():
 	var _scene = get_tree().change_scene("res://Game.tscn")
