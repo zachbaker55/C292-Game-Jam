@@ -8,3 +8,4 @@ func _on_Replay_pressed():
 
 func _on_Exit_pressed():
 	get_tree().quit()
+ 
