@@ -86,6 +86,13 @@
 			"event_id": "dialogic_016"
 		},
 		{
+			"choice": "dog",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
 			"choice": "people",
 			"condition": "",
 			"definition": "",
@@ -93,15 +100,8 @@
 			"value": ""
 		},
 		{
-			"anchor_id": "",
+			"anchor_id": "anchor-1669834213",
 			"event_id": "dialogic_016"
-		},
-		{
-			"choice": "dog",
-			"condition": "",
-			"definition": "",
-			"event_id": "dialogic_011",
-			"value": ""
 		},
 		{
 			"event_id": "dialogic_013"

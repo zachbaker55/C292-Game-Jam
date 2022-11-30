@@ -90,6 +90,10 @@ Global="*res://Global.gd"
 
 [display]
 
+window/size/width=400
+window/size/height=224
+window/size/test_width=1600
+window/size/test_height=896
 window/stretch/mode="viewport"
 window/stretch/aspect="keep"
 
