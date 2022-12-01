@@ -20,10 +20,11 @@ Global="*res://Global.gd"
 
 [display]
 
-window/size/width=400
-window/size/height=224
-window/size/test_width=1600
-window/size/test_height=896
+window/size/width=1200
+window/size/height=672
+window/size/resizable=false
+window/size/test_width=1200
+window/size/test_height=672
 window/stretch/mode="viewport"
 window/stretch/aspect="keep"
 

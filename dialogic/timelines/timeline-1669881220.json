@@ -1,0 +1,66 @@
+{
+	"events": [
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Now that I have all the parts, I can finally make Dinner!"
+		},
+		{
+			"call_node": {
+				"arguments": [
+
+				],
+				"method_name": "make_Dinner",
+				"target_node_path": "Game/Completion"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Hello, I am Dinner. Thank you for making me. I will be your friend forever."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I have done it, I have made Dinner. Hooray!"
+		},
+		{
+			"call_node": {
+				"arguments": [
+
+				],
+				"method_name": "happy",
+				"target_node_path": "Game/Player"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
+			"call_node": {
+				"arguments": [
+
+				],
+				"method_name": "happy",
+				"target_node_path": "Game/Completion"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
+			"event_id": "dialogic_023",
+			"hide_dialogbox": true,
+			"wait_seconds": 5
+		},
+		{
+			"change_scene": "res://UI/Victory.tscn",
+			"event_id": "dialogic_041"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.1",
+		"file": "timeline-1669881220.json",
+		"name": "End"
+	}
+}

@@ -1,46 +1,100 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=15 format=2]
 
-[ext_resource path="res://Assets/tempPlayer.png" type="Texture" id=1]
+[ext_resource path="res://Assets/player.png" type="Texture" id=1]
 [ext_resource path="res://Player/Player.gd" type="Script" id=2]
+[ext_resource path="res://Assets/left_arm.png" type="Texture" id=3]
+[ext_resource path="res://Assets/left_leg.png" type="Texture" id=4]
+[ext_resource path="res://Assets/head.png" type="Texture" id=5]
+[ext_resource path="res://Assets/torso.png" type="Texture" id=6]
+[ext_resource path="res://Assets/right_arm.png" type="Texture" id=7]
+[ext_resource path="res://Assets/right_leg.png" type="Texture" id=8]
 
-[sub_resource type="AtlasTexture" id=1]
+[sub_resource type="AtlasTexture" id=6]
 atlas = ExtResource( 1 )
-region = Rect2( 0, 0, 16, 16 )
+region = Rect2( 600, 0, 200, 200 )
 
-[sub_resource type="AtlasTexture" id=2]
+[sub_resource type="AtlasTexture" id=7]
 atlas = ExtResource( 1 )
-region = Rect2( 16, 0, 16, 16 )
+region = Rect2( 0, 0, 200, 200 )
 
-[sub_resource type="AtlasTexture" id=3]
+[sub_resource type="AtlasTexture" id=8]
 atlas = ExtResource( 1 )
-region = Rect2( 32, 0, 16, 16 )
+region = Rect2( 200, 0, 200, 200 )
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 1 )
+region = Rect2( 400, 0, 200, 200 )
 
 [sub_resource type="SpriteFrames" id=4]
 animations = [ {
-"frames": [ SubResource( 1 ) ],
+"frames": [ SubResource( 6 ) ],
+"loop": true,
+"name": "getItem",
+"speed": 5.01
+}, {
+"frames": [ SubResource( 7 ) ],
 "loop": true,
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 2 ), SubResource( 3 ) ],
+"frames": [ SubResource( 8 ), SubResource( 9 ) ],
 "loop": true,
 "name": "walk",
 "speed": 5.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=5]
-extents = Vector2( 8, 8 )
+extents = Vector2( 32, 50 )
 
 [node name="Player" type="KinematicBody2D"]
+collision_layer = 3
+collision_mask = 3
 script = ExtResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 4 )
 animation = "idle"
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 1 )
 shape = SubResource( 5 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="GetPart" type="Node2D" parent="."]
+position = Vector2( 0, -60 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Head" type="Sprite" parent="GetPart"]
+visible = false
+texture = ExtResource( 5 )
+
+[node name="Torso" type="Sprite" parent="GetPart"]
+visible = false
+texture = ExtResource( 6 )
+
+[node name="LeftArm" type="Sprite" parent="GetPart"]
+visible = false
+texture = ExtResource( 3 )
+
+[node name="RightArm" type="Sprite" parent="GetPart"]
+visible = false
+texture = ExtResource( 7 )
+
+[node name="LeftLeg" type="Sprite" parent="GetPart"]
+visible = false
+rotation = 0.523599
+texture = ExtResource( 4 )
+
+[node name="RightLeg" type="Sprite" parent="GetPart"]
+visible = false
+rotation = -0.523599
+texture = ExtResource( 8 )
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

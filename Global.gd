@@ -1,6 +1,7 @@
 extends Node
 
 var VP = null
+var partsCollected = 0
 
 
 func _ready():
@@ -26,3 +27,6 @@ func add_part(type):
 		
 func reset():
 	var _scene = get_tree().change_scene("res://Game.tscn")
+	var new_dialogue = Dialogic.start("Start")
+	add_child(new_dialogue)
+	partsCollected = 0

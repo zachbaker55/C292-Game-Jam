@@ -1,0 +1,31 @@
+{
+	"events": [
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I've entered the Cannibal Carnival."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I must find all of the body parts in this carnival in preparation for Dinner."
+		},
+		{
+			"call_node": {
+				"arguments": [
+
+				],
+				"method_name": "start_moving",
+				"target_node_path": "Game/Player"
+			},
+			"event_id": "dialogic_042"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.1",
+		"file": "timeline-1669881208.json",
+		"name": "Start"
+	}
+}
