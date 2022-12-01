@@ -490,7 +490,7 @@ func _on_text_completed():
 		$DialogicTimer.start(0.1); yield($DialogicTimer, "timeout")
 		if settings.get_value('input', 'autofocus_choices', true):
 			button_container.get_child(0).grab_focus()
-			
+		
 	
 	if current_event.has('text'):
 		# Already showed the text, ready to show the ▼ next indicator button

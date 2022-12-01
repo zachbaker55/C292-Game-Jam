@@ -33,7 +33,7 @@ func start_moving():
 func get_part(type):
 	sprite.animation =  "getItem"
 	getPart.get_child(int(type)).visible = true
-	Global.add_part(0)
+	Global.add_part(type)
 	Global.partsCollected += 1
 	timer.start(3)
 	

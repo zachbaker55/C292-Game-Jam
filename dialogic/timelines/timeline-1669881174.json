@@ -1,6 +1,117 @@
 {
 	"events": [
+		{
+			"event_id": "dialogic_015",
+			"id": "anchor-1669834213",
+			"index": 0,
+			"name": "question"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Answer my riddle and you will gain a prize!"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_010",
+			"options": [
 
+			],
+			"portrait": "",
+			"question": "Why can't you make deals with cannibals? "
+		},
+		{
+			"choice": "They'll betray you.",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Bzzt, you got it wrong."
+		},
+		{
+			"anchor_id": "anchor-1669834213",
+			"event_id": "dialogic_016"
+		},
+		{
+			"choice": "You can't trust them.",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Bzzt, you got it wrong."
+		},
+		{
+			"anchor_id": "anchor-1669834213",
+			"event_id": "dialogic_016"
+		},
+		{
+			"choice": "It'll cost you an arm and a leg.",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You are such a good cannibal, you got it correct!"
+		},
+		{
+			"call_node": {
+				"arguments": [
+
+				],
+				"method_name": "complete",
+				"target_node_path": "Game/NPCContainer/NPC4"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
+			"call_node": {
+				"arguments": [
+					"3"
+				],
+				"method_name": "get_part",
+				"target_node_path": "Game/Player"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
+			"choice": "?",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You need it repeated?"
+		},
+		{
+			"anchor_id": "anchor-1669834213",
+			"event_id": "dialogic_016"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		}
 	],
 	"metadata": {
 		"dialogic-version": "1.4.1",

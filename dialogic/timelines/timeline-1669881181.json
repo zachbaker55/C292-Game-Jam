@@ -1,6 +1,117 @@
 {
 	"events": [
+		{
+			"event_id": "dialogic_015",
+			"id": "anchor-1669834213",
+			"index": 0,
+			"name": "question"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Answer my riddle and you will gain a prize!"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_010",
+			"options": [
 
+			],
+			"portrait": "",
+			"question": "Why can't you get too close to Sweet Caroline in a group of cannibals? "
+		},
+		{
+			"choice": "Because she might not be around for too long.",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Bzzt, you got it wrong."
+		},
+		{
+			"anchor_id": "anchor-1669834213",
+			"event_id": "dialogic_016"
+		},
+		{
+			"choice": "Because she's so sweet.",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You are such a good cannibal, you got it correct!"
+		},
+		{
+			"call_node": {
+				"arguments": [
+
+				],
+				"method_name": "complete",
+				"target_node_path": "Game/NPCContainer/NPC5"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
+			"call_node": {
+				"arguments": [
+					"4"
+				],
+				"method_name": "get_part",
+				"target_node_path": "Game/Player"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
+			"choice": "Because she's mean.",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Bzzt, you got it wrong."
+		},
+		{
+			"anchor_id": "anchor-1669834213",
+			"event_id": "dialogic_016"
+		},
+		{
+			"choice": "?",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You need it repeated?"
+		},
+		{
+			"anchor_id": "anchor-1669834213",
+			"event_id": "dialogic_016"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		}
 	],
 	"metadata": {
 		"dialogic-version": "1.4.1",
